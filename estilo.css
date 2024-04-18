@@ -160,5 +160,9 @@ button:hover {
     
 }
 
+#Photos{
+    counter-reset: calc(20%);
+    
+}
 
 </style>
