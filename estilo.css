@@ -1,9 +1,33 @@
-<style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+    background-image: url(img/WhatsApp\ Image\ 2024-04-25\ at\ 20.30.45.jpeg);
+}
+
+
+.coluna.titulo{
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+}
+
+
+#box{
+margin-left: 70%;
+background-color: white;
+border: 2.5px solid black;
+justify-content: space-between;
+}
+
+#pdedescricao{
+font-size: 15pt;
+}
+
+#endereço{
+  text-align: center;
+  font-size: 15pt;
 }
 
 header {
@@ -11,6 +35,10 @@ header {
     color: #fafafa;
     padding: 15px;
     text-align: center;
+}
+
+h1{
+  text-align: center;
 }
 
 nav {
@@ -182,7 +210,7 @@ button:hover {
     }
   }
   
-  // Styling
+   Styling
   
   section {
       background: #F4F4F4;
@@ -280,7 +308,7 @@ button:hover {
           display: block;        
       }
       
-      &.scrollable {
+      y.scrollable {
           overflow-y: scroll;
       }
   }
@@ -430,21 +458,30 @@ button:hover {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("img/img_85053723d90ea29c36906bf235e1cbd8.jpeg")
         no-repeat 50% / cover;
     }
     &:nth-of-type(2) {
-      background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("img/img_960507eaf6fe197625f0dc9a85bcb397.jpeg")
         no-repeat 50% / cover;
     }
     &:nth-of-type(3) {
-      background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("img/img_8aa5ad19cb3fbdda2fcf355bbb2156de.jpeg")
         no-repeat 50% / cover;
     }
     &:nth-of-type(4) {
-      background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      background: url("img/img_9441fa701ea6bbdb706a50608a11b659.jpeg")
         no-repeat 50% / cover;
     }
+    &:nth-of-type(5) {
+      background: url("img/img_58df6a6ad5f7f2f87b893d1a3b4292df.jpeg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(6) {
+      background: url("img/img_e87dacf3a2467fdeef418487705346f7.jpeg")
+        no-repeat 50% / cover;
+    }
+
 
     .content {
       font-size: 1.5rem;
@@ -465,6 +502,8 @@ button:hover {
       transform: translatey(100%);
       transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
       visibility: hidden;
+
+      
 
       span {
         display: block;
