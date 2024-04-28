@@ -2,11 +2,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e2e2e2;
-    background-image: url("img/fundo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: auto;
+    background-color: #f2f2f2;
+    background-image: url(img/WhatsApp\ Image\ 2024-04-25\ at\ 20.30.45.jpeg);
+}
+
+
+.coluna.titulo{
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+}
+
+
+#box{
+margin-left: 70%;
+background-color: white;
+border: 2.5px solid black;
+justify-content: space-between;
+}
+
+#pdedescricao{
+font-size: 15pt;
+}
+
+#endereço{
+  text-align: center;
+  font-size: 15pt;
 }
 
 header {
@@ -16,9 +37,12 @@ header {
     text-align: center;
 }
 
+h1{
+  text-align: center;
+}
+
 nav {
     background-color: #126d65;
-
     overflow: hidden;
 }
 
@@ -105,7 +129,88 @@ button:hover {
     display: block;
 }
 
+/* Media query para telas menores que 768px */
+@media (max-width: 767.98px) {
+    header, nav {
+        width: 100%;
+    }
 
+    header img {
+        width: 100px;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .search-container {
+        margin: 10px 0;
+    }
+
+    input[type=text], button {
+        width: 80%;
+    }
+}
+
+#Login{
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(45deg,cyan, yellow); 
+    }
+    div{background-color: rgba(0, 0, 0, 0.9); 
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50%); 
+        padding: 50px;
+        border-radius: 15px; 
+        color: wheat; 
+
+    }
+    input{
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+    button{
+        background-color: dodgerblue;
+        border: none;
+        padding: 15px;
+        width: 100%;
+        border-radius: 10px;
+        color: wheat;
+    }
+    button:hover{
+        background-color: deepskyblue;
+        cursor: pointer;
+    }
+    
+}
+
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+      
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+      
+    > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+    }
+  }
+  
+   Styling
   
   section {
       background: #F4F4F4;
@@ -119,11 +224,10 @@ button:hover {
   }
   
   .carousel {
-      display: flexbox;
+      display: block;
       text-align: left;
       position: relative;
       margin-bottom: 22px;
-      
       
       > input {
           clip: rect(1px, 1px, 1px, 1px);
@@ -204,7 +308,7 @@ button:hover {
           display: block;        
       }
       
-      &.scrollable {
+      y.scrollable {
           overflow-y: scroll;
       }
   }
@@ -228,7 +332,7 @@ button:hover {
           transition: all 300ms ease-in-out;
       }
       
-      .label {
+      label {
           display: block;
           @include aspect-ratio(1,1);
           
@@ -370,9 +474,15 @@ button:hover {
         no-repeat 50% / cover;
     }
     &:nth-of-type(5) {
-      background: url("img/img_9441fa701ea6bbdb706a50608a11b659.jpeg")
+      background: url("img/img_58df6a6ad5f7f2f87b893d1a3b4292df.jpeg")
         no-repeat 50% / cover;
     }
+    &:nth-of-type(6) {
+      background: url("img/img_e87dacf3a2467fdeef418487705346f7.jpeg")
+        no-repeat 50% / cover;
+    }
+
+
     .content {
       font-size: 1.5rem;
       color: #fff;
@@ -393,21 +503,14 @@ button:hover {
       transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
       visibility: hidden;
 
+      
+
       span {
         display: block;
         margin-top: 5px;
         font-size: 1.2rem;
       }
     }
-
-
- 
-
-
-
-
-
-
 
     &:hover {
       flex: 0 0 250px;
@@ -538,18 +641,3 @@ button:hover {
     opacity: 0;
     transition-duration: .3s;
   }
-
-  .carousel__slide img { 
-    display: flex;
-  
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
- 
