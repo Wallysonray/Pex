@@ -1,24 +1,30 @@
-let index = 0;
-const imagens = document.querySelectorAll('.imagem');
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
 
-function mostrarFoto() {
-    imagens.forEach((imagem, i) => {
-        if (i === index) {
-            imagem.style.transform = 'translateX(0)';
-        } else {
-            imagem.style.transform = 'translateX(-100%)';
-        }
-    });
-}
-
-function mudarFoto(direction) {
-    index += direction;
-    if (index < 0) {
-        index = imagens.length - 1;
-    } else if (index >= imagens.length) {
-        index = 0;
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
     }
-    mostrarFoto();
+  });
 }
 
-mostrarFoto();
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+}
+
+setInterval(nextSlide, 2000);
